@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: aw0hj39bv-nodejs-gitops
+  description: This is GitOps manifest for aw0hj39bv-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: aw0hj39bv-nodejs
+    janus-idp.io/tekton: aw0hj39bv-nodejs 
+    backstage.io/kubernetes-id: aw0hj39bv-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:aw0hj39bv-nodejs
